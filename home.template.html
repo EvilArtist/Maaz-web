@@ -1,56 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/stylesetup.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <title>Home</title>
+<head th:replace="components/fragments :: headDeclaration('Home')">
 </head>
 
 <body>
-    <header>
-        <div class="back-ground flex flex-row justify-between py-3">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="logo">
-            </div>
-            <div class="navigation">
-                <ul class="flex flex-row">
-                    <li class="mr-3">Product</li>
-                    <li class="mr-3">Service</li>
-                    <li class="mr-3">Resource</li>
-                    <li class="mr-3">Company</li>
-                </ul>
-            </div>
-        </div>
+    <header th:replace="components/fragments :: header(menuItems, links)">
     </header>
 
     <div class="main">
         <div class="h-60 banner bg-gradient-to-r from-zinc-300 to-zinc-800 relative section">
             <div class="banner-text absolute top-1/2">
-                <h1 class="name text-red-500 font-bold text-lg">
+                <h1 class="name text-red-500 font-bold text-lg" th:text="${project.name}">
                     MaaZ - MonoZukuri Adaptive AUTOSAR
                 </h1>
-                <div class="subtitle text-lg">
+                <div class="subtitle text-lg" th:text="${project.slogan}">
                     Delivering AUTOSAR and beyond!
                 </div>
-                <button class="rounded bg-color2 text-color5 hover:bg-color1 px-6 py-2">
+                <button class="rounded bg-color2 text-color5 hover:bg-color1 px-6 py-2" th:text="${resource.contactUs}">
                     Contact Us
                 </button>
             </div>
         </div>
         <br>
         <div class="article section">
-            <div class="article-image">
+            <div class="article-image" th:text="${project.introduction.media}">
                 <iframe src="https://www.youtube.com/embed/cEqEfFROKm4" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -58,14 +32,14 @@
 
             <div class="article-text align-left">
                 <div class="article-title">
-                    <h2 class="text-red-500 font-bold text-lg">
+                    <h2 class="text-red-500 font-bold text-lg" th:text="${project.introduction.title}">
                         INTRODUCING MaaZ
                     </h2>
-                    <div class="subtitle text-lg">
+                    <div class="subtitle text-lg" th:text="${project.introduction.subtitle}">
                         Your comprehensive AUTOSAR solutions
                     </div>
                 </div>
-                <div class="article-description">
+                <div class="article-description" th:text="${project.introduction.description}">
                     AUTOSAR (AUTomotive Open System ARchitecture) is a worldwide development standard of leading
                     automotive manufacturers, suppliers, service providers and companies, founded since 2003.
                     <br>
@@ -607,85 +581,9 @@
             </div>
         </div>
     </div>
-
-    <footer class="section pb-4">
-        <div class="footer grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="infomation col-span-2 ">
-                <div class="logo"><img src="assets/images/logo.png" alt="logo"></div>
-                <div class="font-bold">
-                    MaaZ - MonoZukuri Adaptive AUTOSAR
-                </div>
-                <div class="address-part">
-                    <div class="font-bold">Head Quarter:</div>
-                    <div class="address whitespace-normal">FPT Tower, Pham Van Bach street, Cau Giay district, Hanoi, Vietnam</div>
-                </div>
-                <div class="tel-part">
-                    <span class="font-bold">Tel:</span>
-                    <a class="tel whitespace-normal ml-1" href="tel:+84 XXXXXXXX">+84 XXXXXXXX</a>
-                </div>
-                <div class="email-part">
-                    <span class="font-bold">Tel:</span>
-                    <a class="email whitespace-normal ml-1" href="mailto:fsoft@fpt.com.vn">fsoft@fpt.com.vn</a>
-                </div>
-                <div class="copyright mt-2">
-                    2022 (c) MaaZ - FPT Software. All Rights Reserved. 
-                </div>
-            </div>
-
-            <div class="products-list">
-                <div class="font-bold">Products</div>
-                <ul>
-                    <li>
-                        <a href="#">MaaZ Classic Platform</a>
-                    </li>
-                    <li>
-                        <a href="#">MaaZ Adaptive Platform</a>
-                    </li>
-                    <li>
-                        <a href="#">Flash bootloader</a>
-                    </li>
-                    <li>
-                        <a href="#">Test Automation</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="services-list">
-                <div class="font-bold">Products</div>
-                <ul>
-                    <li><a href="#">AUTOSAR CLASSIC</a></li>
-                    <li><a href="#">AUTOSAR ADAPTIVE</a></li>
-                    <li><a href="#">Integrated Cockpit</a></li>
-                    <li><a href="#">ADAS & AD</a></li>
-                    <li><a href="#">Connected Car </a></li>
-                    <li><a href="#">EV </a></li>
-                    <li><a href="#">Car Amplifier</a></li>
-                    <li><a href="#">Powertrain</a></li>
-                    <li><a href="#">Body Electronics</a></li>
-                    <li><a href="#">FuSa</a></li>
-                    <li><a href="#">SECURITY</a></li>
-                    <li><a href="#">ASPICE Fulfillment</a></li>
-                </ul>
-            </div>
-
-            <div class="resource-list md:col-start-3 lg:col-start-5">
-                <div class="font-bold">Resources</div>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Whitepaper</a></li>
-                    <li><a href="#">Case Study</a></li>
-                </ul>   
-            </div>
-            <div class="company md:col-start-4 lg:col-start-6">
-                <div class="font-bold">Company</div>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>   
-            </div>
-        </div>
+    
+    <footer th:replace="components/fragments :: footer">
     </footer>
-
 </body>
 
 </html>
