@@ -157,30 +157,101 @@ li.flex .content {
     line-height: 100px;
 }
 
-.thumb-swiper {
-    width: 750px;
-    height: 150px;
-    max-width: 100%;
-}
-
 .parter-logo {
     width: 250px;
 }
 
-.testimonial {
-    background-color: var(--color4);
-    padding: 2rem;
+.testimonials {
+    background-color: var(--bg);
     height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5rem;
+    padding-bottom: 6.5rem;
 }
 
+.testimonials .thumb-swiper {
+    width: 100%;
+    padding: 2rem var(--section-padding);
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0.6;
+}
+
+.testimonials .title {
+    margin-bottom: 2rem;
+}
+
+.testimonials .swiper img {
+    height: 34px;
+    margin-bottom: 1.5rem;
+}
+
+.testimonials .main-swiper {
+    width: calc(100% + 8rem);
+    margin: 0 -4rem;
+    --swiper-navigation-size: 0.5rem;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-weight: 900;
+}
+
+.main-swiper .swiper-button-prev {
+    left: calc(4rem + var(--section-padding));
+}
+.main-swiper .swiper-button-next {
+    left: unset;
+    right: calc(4rem + var(--section-padding));
+}
+
+.main-swiper .swiper-button-prev,
+.main-swiper .swiper-button-next {
+    padding: 1.25rem;
+    border-radius: 50%;
+    background: var(--text-color);
+}
+
+.testimonial {
+    padding: 1.5rem 1rem;
+}
+
+.main-swiper .swiper-slide-active {
+    background: linear-gradient(204.13deg, rgba(210, 210, 210, 0.6) 16.07%, rgba(116, 116, 116, 0) 85.68%);
+    padding: 1px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+.main-swiper .swiper-slide-active .testimonial {
+    background: rgba(0, 0, 0);
+    border-radius: 0.75rem;
+}
+
+.main-swiper .swiper-slide-next .testimonial,
+.main-swiper .swiper-slide-prev .testimonial {
+    border-radius: 0.75rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.main-swiper .swiper-slide-next .testimonial .description,
+.main-swiper .swiper-slide-prev .testimonial .description {
+    
+    border-radius: 0.75rem;
+    background: linear-gradient(270deg, rgba(248, 249, 255, 0) 1.22%, #F8F9FF 49.22%, rgba(248, 249, 255, 0) 84.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 .swiper .swiper-slide {
     height: auto;
 }
-
+/* 
 .thumb-swiper .swiper-wrapper {
     align-items: center;
     gap: 3px;
-}
+} */
 
 
 .main-swiper-prev::after, .main-swiper-next::after {

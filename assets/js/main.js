@@ -9,15 +9,17 @@ $(() => {
         autoplay: {
             delay: 5000,
         },
+        slidesPerView: 3,
+        centeredSlides: true,
         loop: true,
         speed: 400,
-        spaceBetween: 100,
+        spaceBetween: 24,
         thumbs: {
             swiper: thumbSwiper
         },
         navigation: {
-            nextEl: ".main-swiper-next",
-            prevEl: ".main-swiper-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         }
     });
     updateSwiperStatus(mainswiper);

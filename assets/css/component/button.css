@@ -3,7 +3,8 @@ button, .button.button, .btn {
     padding: 1px;
     font-size: 1rem;
     border-radius: 8px;
-    background: radial-gradient(229.16% 452.18% at 52.81% 189.77%, #FFFFFF 0%, #727272 48.52%, #FFFFFF 100%);
+    transition: 0.3s;
+    background: linear-gradient(351deg, rgba(255,255,255,1) 0%, rgba(114,114,114,0.4) 50%, rgba(255,255,255,1) 100%);
 }
 button .button-text, .button .button-text, .btn .button-text {
     padding: 0.75rem 1.5rem;
@@ -12,6 +13,16 @@ button .button-text, .button .button-text, .btn .button-text {
     border-radius: 8px;
     font-weight: bold;
     line-height: 1.25rem;
+}
+
+.button.border-button .button-text{
+    background: var(--bg);
+    color: var(--color5);
+}
+
+.button.border-button:hover .button-text {
+    background: var(--color5);
+    color: var(--bg);
 }
 
 /* 
