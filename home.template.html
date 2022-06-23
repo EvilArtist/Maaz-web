@@ -24,7 +24,7 @@
         </div>
         <br>
         <div class="article section">
-            <div class="article-image" th:text="${project.introduction.media}">
+            <div class="article-image" th:utext="${project.introduction.media}">
                 <iframe src="https://www.youtube.com/embed/cEqEfFROKm4" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -51,85 +51,27 @@
         </div>
         <br>
         <div class="sets-us-apart section">
-            <h1 class="title text-red-500 text-center w-full text-lg font-bold">
+            <h1 class="title text-red-500 text-center w-full text-lg font-bold" th:text="${resource.difference}">
                 What sets us apart
             </h1>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 lg:gap-16 mr-2">
-                <div class="description w-full card rounded-3xl bg-neutral-400 p-8">
-                    <h2 class="font-bold text-center">Proven Experience</h2>
-                    <ul>
-                        <li>
-                            12+ years of experience in Platform (MCAL, BSW, SWC, Microcontrollers), Tools, Safety, R&D,
-                            etc. which comply with ISO26262 A-SIL A/B/C/D and A-SPICE Level 3
-                        </li>
-                        <li>
-                            End-to-End Turnkey Solutions with ready-made platforms, tools, and services accelerating the
-                            AUTOSAR transformation.
-                        </li>
-                        <li>
-                            CI/CD/DevOps as the defacto standard
-                        </li>
-                        <li>
-                            500+ AUTOSAR experts.
-                        </li>
-                    </ul>
-                </div>
-                <div class="description w-full card rounded-3xl bg-neutral-400 p-8">
-                    <h2 class="font-bold text-center">High Efficiency
-                    </h2>
-                    <ul>
-                        <li>
-                            Efficiency = Time-to-market x Cost x Quality
-                        </li>
-                        <li>Efficiency = Time-to-market x Cost x Quality
-                            Big pool of software engineers = Parallel developments = short duration. </li>
-                        <li>
-                            Optimal cost competitiveness = utilizing 20% of total resources in onshore + 80% of total
-                            resources in Vietnam and other offshore bases
-                        </li>
-                        <li>
-                            Secure and high-quality software services by taking advantage of our experience with the
-                            world's top chipmakers, tier-1 automotive suppliers, and OEMs
-                        </li>
-                    </ul>
-                </div>
-                <div class="description card w-full rounded-3xl bg-neutral-400 p-8">
-                    <h2 class="font-bold text-center">Flexibility</h2>
-                    <ul>
-                        <li>
-                            Adaptive to customers' frequent changes in requirements
-                        </li>
-                        <li>
-                            Flexible working model: On-site, Offshore & Mix - Scale up at any time and anywhere</li>
-                        <li>
-                            Flexible business models: onshore/offshore hybrid or even BOT (Build-Operate- Transfer).
-                        </li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 lg:gap-16 mr-2" >
+                <div class="description w-full card rounded-3xl bg-neutral-400 p-8"
+                    th:each="article : ${project.differences}">
+                    <h2 class="font-bold text-center" th:text="${article.title}">Proven Experience</h2>
+                    <div th:utext="${article.body}"></div>
                 </div>
             </div>
         </div>
         <br>
         <div class="testimonials section">
-            <h1 class="title text-red-500 text-center w-full text-lg font-bold">
-                What sets us apart
+            <h1 class="title text-red-500 text-center w-full text-lg font-bold" th:text="${resource.testimonial}">
+                Trusted by top-notch partners
             </h1>
 
             <div class="swiper thumb-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="assets/images/partner1.png" alt="partner 1" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/partner2.png" alt="partner 2" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/partner3.png" alt="partner 3" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/partner4.png" alt="partner 4" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/partner5.png" alt="partner 5" />
+                    <div class="swiper-slide" th:each="article : ${project.partners}">
+                        <img src="assets/images/partner1.png" th:src="${article.media}" alt="article.title" />
                     </div>
                 </div>
             </div>
@@ -139,50 +81,10 @@
             </h1>
             <div class="swiper main-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" th:each="article : ${project.partners}">
                         <div class="testimonial rounded-xl">
-                            <img src="assets/images/partner1.png" />
-                            <div class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, velit? Error, similique.
-                                Deleniti, libero! Atque quos, eveniet explicabo iure sint nostrum. Non commodi optio
-                                eligendi laborum magni sequi quas odio.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial rounded-xl">
-                            <img src="assets/images/partner2.png" />
-                            <div class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, velit? Error, similique.
-                                Deleniti, libero! Atque quos, eveniet explicabo iure sint nostrum. Non commodi optio
-                                eligendi laborum magni sequi quas odio.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial rounded-xl">
-                            <img src="assets/images/partner3.png" />
-                            <div class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, velit? Error, similique.
-                                Deleniti, libero! Atque quos, eveniet explicabo iure sint nostrum. Non commodi optio
-                                eligendi laborum magni sequi quas odio.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial rounded-xl">
-                            <img src="assets/images/partner4.png" />
-                            <div class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, velit? Error, similique.
-                                Deleniti, libero! Atque quos, eveniet explicabo iure sint nostrum. Non commodi optio
-                                eligendi laborum magni sequi quas odio.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial rounded-xl">
-                            <img src="assets/images/partner5.png" />
-                            <div class="description">
+                            <img src="assets/images/partner5.png" th:src="${article.media}" alt="article.title" />
+                            <div class="description" th:text="${article.description}">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, velit? Error, similique.
                                 Deleniti, libero! Atque quos, eveniet explicabo iure sint nostrum. Non commodi optio
                                 eligendi laborum magni sequi quas odio.
@@ -198,14 +100,14 @@
                 </div>
             </div>
             <div class="text-red-500 text-center w-full font-bold underline underline-offset-4"><a
-                    href="/sucess-stories">Explore more</a> </div>
+                    href="/sucess-stories" th:text="${resource.exploreMore}">Explore more</a> </div>
         </div>
         <br>
         <div class="section products">
-            <h1 class="title text-red-500 w-full text-lg font-bold">
+            <h1 class="title text-red-500 w-full text-lg font-bold" th:text="${resource.products}">
                 Dynamic Products for you
             </h1>
-            <div class="description">
+            <div class="description" th:text="${resource.productsIntroduction}">
                 MaaZ is the expert in AUTOSAR with more than 14+ years of global experience. Our specialization covers
                 both the Classic and Adaptive AUTOSAR standards.
             </div>

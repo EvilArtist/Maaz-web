@@ -1,24 +1,72 @@
+@import url(./component/color.css);
+@import url(./component/_select.css);
+@import url(./component/logo.css);
+@import url(./component/button.css);
 :root {
-    --color1: #9418e7;
-    --color2: #4611a2;
-    --color3: #dbc6ff;
-    --color4: #b78dff;
-    --color5: #ffE3ff;
+    --section-padding: 7.5rem;
+    --svg-padding: 12.375rem
 }
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-size: 16px;
+    color: var(--text-color);
+    line-height: 24px;
+}
+
+body {
+    background: var(--bg);
 }
 
 header > * {
-    padding: 0 48px;
+    padding: 0 var(--section-padding);
 }
 
 .banner-text {
-    transform: translateY(-50%);
+    padding: 0 var(--section-padding);
+}
+.banner-text .title {
+    font-size: 3.75rem;
+    line-height: 4rem;
+}
+
+.banner-text  .slogan {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: var(--color4);
+    margin: 1rem 0;
+}
+
+.title {
+    background: linear-gradient(177.46deg, #FFFFFF 57.51%, #AFAFAF 87.85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.introduction {
+    position: relative;
+    background: radial-gradient(100% 100% at 48.86% 100%, #000913 42.46%, #242424 67.19%, #000913 100%);
+    padding: var(--section-padding);
+}
+
+.introduction .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem var(--svg-padding);
+}
+
+.introduction .logo {
+    height: 44px;
+}
+
+.article-description {
+    margin-top: 1.5rem;
 }
 
 .image-holder {
@@ -95,27 +143,30 @@ header > * {
 
 
 @media screen and (min-width: var(576px)) {
-    .main > .section, footer {
-        padding: 0 1rem;
+    :root {
+        --section-padding: 1rem;
+        --svg-padding: 1.2rem;
     }
 }
 
 
 @media screen and (min-width: 768px) {
-    .main > .section, footer {
-        padding: 0 2rem;
+    :root {
+        --section-padding: 2rem;
+        --svg-padding: 2.3rem;
     }
 }
 @media screen and (min-width: 992px) {
-    .main > .section, footer {
-        padding: 0 5rem;
+    :root {
+        --section-padding: 5rem;
+        --svg-padding: 7.625rem
     }
     
     .article {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
-        gap: 1rem;
+        gap: 2rem;
         flex-direction: row-reverse;
     }
 
@@ -124,7 +175,7 @@ header > * {
     }
 
     .article .article-image {
-        flex: 0 0 25%;
+        flex: 0 0 45%;
     }
 
     .article .article-image iframe {
@@ -132,13 +183,9 @@ header > * {
         height: auto;
     }
 }
-@media screen and (min-width: 1200px) {
-    .main > .section, footer {
-        padding: 0 10rem;
-    }
-}
 @media screen and (min-width: 1400px) {
-    .main > .section, footer {
-        padding: 0 12rem;
+    :root {
+        --section-padding: 7.5rem;
+        --svg-padding: 12.375rem
     }
 }
