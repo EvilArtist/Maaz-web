@@ -69,6 +69,85 @@ header > * {
     margin-top: 1.5rem;
 }
 
+.sets-us-apart {
+    background: radial-gradient(100% 100% at 48.68% 100%, #040A10 0.19%, #000913 22.4%, #000913 53.12%, #1A1D20 76.04%, #000913 100%);
+    padding: 5rem var(--section-padding);
+    position: relative;
+}
+
+.sets-us-apart .title {
+    margin-bottom: 5rem;
+}
+
+.sets-us-apart .description {
+    margin-bottom: 2rem;
+}
+
+.sets-us-apart ul li {
+    margin-bottom: 1rem;
+}
+
+.sets-us-apart .icon {
+    height: 35px;
+}
+
+.sets-us-apart .hr-end {
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sets-us-apart .hr-end.part-1 {
+    width: 27.5rem;
+    max-width: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 51.16%, rgba(255, 255, 255, 0) 100%);
+}
+
+.sets-us-apart .hr-end.part-2 {
+    width: 10rem;
+    height: 4px;
+    max-width: 50%;
+    border-radius: 4px 4px 0 0;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 12px rgba(255, 255, 255, 0.5);
+}
+
+.slash-bullet {
+    position: relative;
+    height: 24px;
+    width: 20px;
+    margin-right: 0.625rem;
+}
+
+.slash-bullet::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 6px;
+    transform: translate(-100%, -50%) skewX(-45deg);
+    background: linear-gradient(177.46deg, #FFFFFF 57.51%, #AFAFAF 87.85%);
+}
+
+.slash-bullet::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 6px;
+    transform: translate(100%, -50%) skewX(-45deg);
+    background: linear-gradient(177.46deg, #FFFFFF 57.51%, #AFAFAF 87.85%);
+    opacity: 0.4;
+}
+
+li.flex .content {
+    flex: 1;
+}
+
 .image-holder {
     background-color: var(--color1);
     color: var(--color5);
@@ -76,12 +155,6 @@ header > * {
     vertical-align: middle;
     height: 100%;
     line-height: 100px;
-}
-
-.main > .section, footer {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    padding: 0.75rem;
 }
 
 .thumb-swiper {

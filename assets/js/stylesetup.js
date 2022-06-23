@@ -20,7 +20,13 @@ $(() => {
                 'hl': ['20px', {
                     lineHeight: '24px',
                     fontWeight: '400'
-                }]
+                }],
+                'title': [
+                    '32px',
+                    {
+                        lineHeight: '40px',
+                    }
+                ]
             },
             zIndex: {
                 '1': '1',
