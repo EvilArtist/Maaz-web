@@ -2,9 +2,12 @@
 @import url(./component/_select.css);
 @import url(./component/logo.css);
 @import url(./component/button.css);
+@import url(./component/article.css);
+
 :root {
     --section-padding: 7.5rem;
-    --svg-padding: 12.375rem
+    --svg-padding: 12.375rem;
+    --product-padding: 6.5rem;
 }
 * {
     padding: 0;
@@ -65,9 +68,6 @@ header > * {
     height: 44px;
 }
 
-.article-description {
-    margin-top: 1.5rem;
-}
 
 .sets-us-apart {
     background: radial-gradient(100% 100% at 48.68% 100%, #040A10 0.19%, #000913 22.4%, #000913 53.12%, #1A1D20 76.04%, #000913 100%);
@@ -192,6 +192,25 @@ li.flex .content {
     --swiper-navigation-size: 0.5rem;
 }
 
+.section-products {
+    padding: 0 var(--section-padding);
+    margin-bottom: 4rem;
+}
+.products-introduction-wrapper {
+    border-radius: 32px 32px 0px 0px;
+    background: linear-gradient(180deg, #D9D9D9 16.07%, rgba(98, 98, 98, 0) 85.68%);
+    padding: 1px;
+}
+.products-introduction {
+    background: linear-gradient(rgba(65, 65, 65, 1) 0%, rgba(26, 26, 26, 1) 12.37%, #040A10 73.72%);
+    border-radius: 32px 32px 0px 0px;
+    padding: 3.5rem;
+}
+
+.products {
+    padding: 0 var(--product-padding);
+}
+
 .swiper-button-next:after, .swiper-button-prev:after {
     font-weight: 900;
 }
@@ -247,12 +266,6 @@ li.flex .content {
 .swiper .swiper-slide {
     height: auto;
 }
-/* 
-.thumb-swiper .swiper-wrapper {
-    align-items: center;
-    gap: 3px;
-} */
-
 
 .main-swiper-prev::after, .main-swiper-next::after {
     font-family: swiper-icons;
@@ -304,27 +317,6 @@ li.flex .content {
     :root {
         --section-padding: 5rem;
         --svg-padding: 7.625rem
-    }
-    
-    .article {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        gap: 2rem;
-        flex-direction: row-reverse;
-    }
-
-    .article.img-left {
-        flex-direction: row;
-    }
-
-    .article .article-image {
-        flex: 0 0 45%;
-    }
-
-    .article .article-image iframe {
-        width: 100%;
-        height: auto;
     }
 }
 @media screen and (min-width: 1400px) {
