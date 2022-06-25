@@ -35,6 +35,9 @@ $(() => {
                     lineHeight: '28px',
                     fontWeight: '700'
                 }],
+                'cu': ['24px', {
+                    lineHeight: '36px'
+                }],
             },
             zIndex: {
                 '1': '1',
