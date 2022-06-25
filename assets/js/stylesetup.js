@@ -26,7 +26,11 @@ $(() => {
                     {
                         lineHeight: '40px',
                     }
-                ]
+                ],
+                'xl': ['60px', {
+                    lineHeight: '64px',
+                    fontWeight: '700'
+                }],
             },
             zIndex: {
                 '1': '1',

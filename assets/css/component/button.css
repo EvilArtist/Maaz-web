@@ -1,9 +1,11 @@
 @import url(./color.css);
 button, .button.button, .btn {
+    --active-width: 1px;
     padding: 1px;
     font-size: 1rem;
     border-radius: 2px;
     transition: 0.3s;
+    position: relative;
     background: linear-gradient(351deg, rgba(255,255,255,1) 0%, rgba(114,114,114,0.4) 50%, rgba(255,255,255,1) 100%);
 }
 button .button-text, .button .button-text, .btn .button-text {
@@ -13,6 +15,7 @@ button .button-text, .button .button-text, .btn .button-text {
     border-radius: 2px;
     font-weight: bold;
     line-height: 1.25rem;
+    position: relative;
 }
 
 .button.border-button .button-text{
@@ -25,12 +28,39 @@ button .button-text, .button .button-text, .btn .button-text {
     color: var(--bg);
 }
 
-/* 
-button:hover {
-border: 1px solid;
+.button .button-hover-background {
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
 
-border-image-source: 
-radial-gradient(229.16% 452.18% at 52.81% 189.77%, #FFFFFF 0%, #727272 48.52%, #FFFFFF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected 
+.button:hover .button-hover-background {
+    opacity: 1;
+}
 
-background: radial-gradient(circle, #FFFFFF 0%, #727272 48.52%, #FFFFFF 100%);
-}*/
+.button .button-hover-background > * {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50.25%, rgba(255, 255, 255, 0) 100%);
+    filter: blur(4px);
+}
+
+.button .button-hover-background .ellipse1 {
+    height: 4px;
+    left: -56px;
+    right: -56px;
+}
+
+.button .button-hover-background .ellipse2 {
+    height: 18px;
+    left: -17px;
+    right: -17px;
+}
+
+.button .button-hover-background .ellipse3 {
+    height: 28px;
+    left: -51px;
+    right: -51px;
+    filter: blur(24px);
+}

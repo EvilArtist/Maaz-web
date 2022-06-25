@@ -1,4 +1,4 @@
-$(() => {
+function configSwiper(params) {
     const thumbSwiper = new Swiper('.thumb-swiper', {
         slidesPerView: 5,        
         freeMode: false,
@@ -45,6 +45,22 @@ $(() => {
         slidesPerView: 4,
         spaceBetween: 16
     })
+}
+function configHover() {
+    $('[data-action="hover"]').hover(function () {
+        var target = $(this).data('target');
+        console.log(target);
+        $(target).addClass('active-hover');
+    }, function () {
+        var target = $(this).data('target');
+        console.log(target);
+        $(target).removeClass('active-hover');
+    });
+}
+
+$(() => {
+    configSwiper();
+    configHover();
 });
 
 function updateSwiperStatus(swiper) {
