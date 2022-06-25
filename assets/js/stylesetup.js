@@ -31,6 +31,10 @@ $(() => {
                     lineHeight: '64px',
                     fontWeight: '700'
                 }],
+                'item': ['20px', {
+                    lineHeight: '28px',
+                    fontWeight: '700'
+                }],
             },
             zIndex: {
                 '1': '1',

@@ -5,7 +5,7 @@ function configSwiper(params) {
         watchSlidesProgress: true
     });
 
-    const mainswiper = new Swiper('.main-swiper', {
+    const _ = new Swiper('.main-swiper', {
         autoplay: {
             delay: 5000,
         },
@@ -21,21 +21,6 @@ function configSwiper(params) {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         }
-    });
-    updateSwiperStatus(mainswiper);
-    mainswiper.on('slideChange', function (e) {
-        updateSwiperStatus(e);
-    });
-
-    const serviceSwiper = new Swiper('.service-swiper', {
-        autoplay: { delay: 5000 },
-        loop: true, 
-        speed: 400,
-        spaceBetween: 100,
-        pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-        },
     });
 
     const recognitionSwiper = new Swiper('.recognitions-swiper', {
@@ -62,10 +47,3 @@ $(() => {
     configSwiper();
     configHover();
 });
-
-function updateSwiperStatus(swiper) {
-    var slidesCount = swiper.slides.length - 2;
-    var realIndex = swiper.activeIndex % slidesCount;
-    realIndex = realIndex || slidesCount;
-    $('.swiper-status').text(`${realIndex}/5`);
-}
