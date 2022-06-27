@@ -1,4 +1,11 @@
+
 :root {
+    /* Box */
+    --section-padding: 7.5rem;
+    --svg-padding: 12.375rem;
+    --product-padding: 6.5rem;
+
+    /* Colors */
     --color1: #1A1A1A;
     --color2: #4611a2;
     --color3: #E6E6E6;

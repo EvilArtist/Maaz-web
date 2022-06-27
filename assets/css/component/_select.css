@@ -1,4 +1,4 @@
-@import url(color.css);
+@import url(variables.css);
 select, .select {
     position: relative;
     transition: 0.3s ease-in;
