@@ -47,6 +47,14 @@
     padding-bottom: 2.75rem;
 }
 
+.parrent-page {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+}
+
 .section-title .title-wrapper {
     margin-top: -52px;
     position: relative;
@@ -239,6 +247,13 @@
     margin-top: 1.5rem;
 }
 
+/* white paper*/
+.new-whitepaper-wrapper {
+    margin-right: -1.5rem;
+}
+.new-whitepaper-wrapper .news-preview-container{
+    margin-right: 1.5rem;
+}
 @media (min-width: 1024px) {
     .section-social-tag {
         padding-left: 0px;
