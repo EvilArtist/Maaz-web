@@ -10,6 +10,10 @@ $(() => {
                     color3: getComputedStyle(document.body ).getPropertyValue('--color3').trim(),
                     color4: getComputedStyle(document.body ).getPropertyValue('--color4').trim(),
                     color5: getComputedStyle(document.body ).getPropertyValue('--color5').trim(),
+                },
+                padding: {
+                    'section': 'var(--padding-section)',
+                    'col-gap': '1.5rem',
                 }
             },
             fontSize: {

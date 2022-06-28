@@ -15,7 +15,7 @@
     </head>
 </div>
 <div th:fragment="header(menuItems, currentPage)" th:with="menuItems = ${ {'Homepage', 'Products', 'Services', 'Resources', 'Company'} }">
-    <header th:with="menuLinks = ${ {'/products', '/service', '/resource', '/company'} }">
+    <header th:with="menuLinks = ${ {'/products', '/service', '/resource.html', '/company'} }">
         <div class="back-ground flex flex-row justify-between">
             <div class="logo">
                 <img src="assets/images/logo.png" alt="logo">

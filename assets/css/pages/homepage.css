@@ -4,14 +4,11 @@
 @import url(../component/button.css);
 @import url(../component/article.css);
 @import url(../component/header.css);
+@import url(../component/contact-us.css);
 
 /* Top banner */
 .banner-text {
     padding: 0 var(--section-padding);
-}
-.banner-text .title {
-    font-size: 3.75rem;
-    line-height: 4rem;
 }
 
 .banner-text  .slogan {
@@ -450,47 +447,4 @@ li.flex .content {
 }
 .blog-preview  .blog-content .blog-type.blogs {
     color: var(--blogs-color);
-}
-
-/* Section contact us*/
-
-.section-contact-us {
-    position: relative;
-    overflow: hidden;
-    padding: 4rem;
-    background: radial-gradient(100% 100% at 48.86% 100%, #040A10 37.91%, #262626 63.7%, #242424 72.74%, #040A10 100%), #0F163D;
-}
-
-.section-contact-us .background {
-    position: absolute;
-    width: 1494px;
-    height: 870px;
-    left: calc(50% - 1494px/2);
-    top: calc(50% - 870px/2 - 38px - 4rem);
-    padding: calc(870px/2 + 38px - 12rem) calc(1494px/2 - 50%) calc(870px/2 - 38px - 18rem) calc(1494px/2 - 50%);
-    overflow: hidden;
-}
-
-.section-contact-us .content{
-    position: relative;
-}
-
-.section-contact-us .content .description {
-    margin-bottom: 1.5rem;
-}
-
-.section-contact-us .background .background-color-wrapper{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.section-contact-us .background .background-color {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.section-contact-us img {
-    height: 20rem;
 }
