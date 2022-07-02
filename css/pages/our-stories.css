@@ -31,6 +31,7 @@
     background: radial-gradient(100% 100% at 48.86% 100%, #040A10 42.46%, #2B2B2B 67.19%, #040A10 100%);
     padding: 1.5rem;
     position: relative;
+    margin-top: 1.5rem;
 }
 .section-introduction .introduction {
     width: 800px;
