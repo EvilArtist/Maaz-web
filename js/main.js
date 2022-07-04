@@ -43,7 +43,24 @@ function configHover() {
     });
 }
 
+
+function contactUs() {
+    $('.button-contact-us').on('click', function (e) {
+        e.preventDefault();
+        $('.contact-us-modal').show();
+    });
+    $('.contact-us-modal .close-button').on('click', function (e) {
+        e.preventDefault();
+        $('.contact-us-modal').hide();
+    });
+    $('.contact-us-modal .overlay').on('click', function (e) {
+        e.preventDefault();
+        $('.contact-us-modal').hide();
+    });
+}
+
 $(() => {
     configSwiper();
     configHover();
+    contactUs();
 });
